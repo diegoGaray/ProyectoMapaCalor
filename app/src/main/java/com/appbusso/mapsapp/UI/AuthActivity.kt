@@ -15,6 +15,7 @@ import com.facebook.login.LoginResult
 import android.content.Intent
 import android.os.Build
 import android.support.design.widget.Snackbar
+import android.text.method.LinkMovementMethod
 import android.view.Gravity
 import android.view.View
 import android.widget.TextView
@@ -51,6 +52,8 @@ class AuthActivity : AppCompatActivity() {
         login_progress.visibility= View.GONE
     }
     private fun setuView() {
+        privacy_policy.movementMethod = LinkMovementMethod.getInstance()
+        privacy_policy.autoLinkMask = 0
         setupFacebookLogin()
         setupGoogleLogin()
     }

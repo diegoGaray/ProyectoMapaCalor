@@ -88,9 +88,9 @@
 
     <string name="id_fmt">User ID: %s</string>
     <string name="email_fmt">Email: %s</string>
+    <string name="mail_title_text">Sign in with e-mail</string>
+    <string name="OR">OR</string>
+    <string name="accept_policy">I have read and accept the</string>
 
-
-
-
-
+    <string name="txtPrivacyPolicy"><a href="http://www.google.com">  privacy policy</a></string>
 </resources>

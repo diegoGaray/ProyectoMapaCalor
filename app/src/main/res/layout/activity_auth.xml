@@ -3,11 +3,144 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/fondo_prueba"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/constraintLogin"
     tools:context=".UI.AuthActivity">
+
+    <ImageView
+        android:src="@drawable/fondo"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <View
+        android:background="#080331"
+        android:alpha="0.8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:src="@drawable/logo"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:padding="@dimen/margen_extra_corto"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"/>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo">
+
+
+        <Button
+            android:id="@+id/login_facebook"
+            android:text="@string/facebook_title_text"
+            android:textColor="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/boton"
+            android:layout_marginRight="@dimen/margen_corto"
+            android:layout_marginLeft="@dimen/margen_corto"
+            android:drawableLeft="@drawable/facebook"
+            android:paddingLeft="@dimen/margen_corto" />
+
+        <Button
+            android:id="@+id/login_google"
+            android:text="@string/google_title_text"
+            android:textColor="@android:color/white"
+            android:layout_marginRight="@dimen/margen_corto"
+            android:layout_marginLeft="@dimen/margen_corto"
+            android:drawableLeft="@drawable/google"
+            android:paddingLeft="@dimen/margen_corto"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/boton_g"
+            android:layout_marginTop="15dp"/>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp">
+
+
+            <View
+                android:background="@color/hintText"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/margen_extra_corto"
+                android:layout_width="80dp"
+                android:layout_height="1dp"/>
+
+
+            <TextView
+                android:text="@string/OR"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:background="@color/hintText"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margen_extra_corto"
+                android:layout_width="80dp"
+                android:layout_height="1dp"/>
+
+
+        </LinearLayout>
+
+
+
+        <Button
+            android:id="@+id/login_email"
+            android:text="@string/mail_title_text"
+            android:textColor="@android:color/background_dark"
+            android:layout_marginRight="@dimen/margen_corto"
+            android:layout_marginLeft="@dimen/margen_corto"
+            android:drawableLeft="@drawable/mail"
+            android:paddingLeft="@dimen/margen_corto"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/boton_w"
+            android:layout_marginTop="15dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <CheckBox
+                android:checked="true"
+                android:text="@string/accept_policy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/mini_text"
+                android:textColor="@android:color/white"
+                />
+
+            <TextView
+                android:id="@+id/privacy_policy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtPrivacyPolicy"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/mini_text"
+                android:clickable="true"
+                android:layout_centerInParent="true"
+                android:linksClickable="true"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
 
     <ProgressBar
         android:id="@+id/login_progress"
@@ -19,32 +152,9 @@
         app:layout_constraintLeft_toLeftOf="parent"
         android:visibility="gone"/>
 
-    <Button
-        android:id="@+id/login_facebook"
-        android:text="@string/facebook_title_text"
-        android:textColor="@android:color/white"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/boton"
-        android:layout_marginRight="@dimen/margen_corto"
-        android:layout_marginLeft="@dimen/margen_corto"
-        android:drawableLeft="@drawable/facebook"
-        android:paddingLeft="@dimen/margen_extra_corto"
-        app:layout_constraintTop_toBottomOf="@+id/guideline" />
 
-    <Button
-        android:id="@+id/login_google"
-        android:text="@string/google_title_text"
-        android:textColor="@android:color/white"
-        android:layout_marginRight="@dimen/margen_corto"
-        android:layout_marginLeft="@dimen/margen_corto"
-        android:drawableLeft="@drawable/google"
-        android:paddingLeft="@dimen/margen_extra_corto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/boton_g"
-        android:layout_marginTop="@dimen/margen_corto"
-        app:layout_constraintTop_toBottomOf="@+id/login_facebook"/>
+
+
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
@@ -59,6 +169,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0." />
+        app:layout_constraintGuide_percent="0.25" />
 
 </android.support.constraint.ConstraintLayout>
