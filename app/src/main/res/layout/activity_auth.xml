@@ -30,6 +30,7 @@
 
 
     <LinearLayout
+        android:visibility="gone"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -141,6 +142,111 @@
 
 
     </LinearLayout>
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/margen_corto"
+        android:layout_marginRight="@dimen/margen_corto"
+        android:layout_marginTop="@dimen/margen_largo"
+        app:layout_constraintTop_toBottomOf="@+id/logo">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/hintText">
+
+            <AutoCompleteTextView
+                android:id="@+id/email"
+                android:drawableLeft="@drawable/ic_mail"
+                android:background="@android:color/transparent"
+                android:drawablePadding="@dimen/margen_extra_corto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_email"
+                android:textColorHint="@color/hintText"
+                android:textColor="@android:color/white"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:paddingTop="@dimen/margen_extra_corto"
+                android:paddingBottom="@dimen/margen_extra_corto"
+                android:singleLine="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <View
+            android:background="@color/hintText"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/hintText"
+                app:passwordToggleTint="@color/hintText"
+                app:passwordToggleEnabled = "true"
+                app:passwordToggleDrawable="@drawable/icon_selector">
+
+                <EditText
+                    android:id="@+id/password"
+                    android:paddingLeft="@dimen/margen_largo"
+                    android:background="@android:color/transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_password"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="textPassword"
+                    android:textColor="@android:color/white"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/action_toggle"
+                android:src="@drawable/ic_pass"
+                android:paddingTop="10dp"
+                android:paddingLeft="5dp"
+                android:background="@android:color/transparent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <View
+            android:background="@color/hintText"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+
+        <Button
+            android:id="@+id/sign_in_button"
+            android:text="sign in"
+            android:textColor="@android:color/white"
+            android:layout_marginRight="@dimen/margen_corto"
+            android:layout_marginLeft="@dimen/margen_corto"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/boton_q"
+            android:layout_marginTop="@dimen/margen_corto" />
+
+
+    </LinearLayout>
+
+
+
 
     <ProgressBar
         android:id="@+id/login_progress"

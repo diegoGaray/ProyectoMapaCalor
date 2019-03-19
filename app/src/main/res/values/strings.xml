@@ -93,4 +93,8 @@
     <string name="accept_policy">I have read and accept the</string>
 
     <string name="txtPrivacyPolicy"><a href="http://www.google.com">  privacy policy</a></string>
+
+
+    <string name="prompt_email">email</string>
+    <string name="prompt_password">password</string>
 </resources>
